@@ -39,13 +39,21 @@ Refer this guide for installation: https://www.jenkins.io/doc/book/installing/#d
 `cat /etc/group | grep -i jenkins`
 jenkins:x:116:njain50
 
-`sudo ufw allow 8080` # we may need to open port 8080 if its protected by firewall
-`sudo ufw status` #verify change
 
 `http://<azure-vm-public-ip>:8080/ ` # access jenkins here
 
 -------------------------------------------------------------------------------------------------------------------------------
 **create sample repo in GIT**
+Here is sample repo in GIT created https://github.com/nitinjain9282/sampledevops with start_docker.sh script. 
+Configure a new job in jenkins with this git url  and it will now run Dockerfile as instructed. 
+
+Note: For jenkins to trigger docker command we need to authorize "jenkins" user to "docker" group
+      ` sudo usermod -aG docker $USER`
+      Restart VM for changes to take effect. 
+
+Done: tag:1.1.2
+-------------------------------------------------------------------------------------------------------------------------------
+
 -------------------------------------------------------------------------------------------------------------------------------
  
 -------------------------------------------------------------------------------------------------------------------------------
