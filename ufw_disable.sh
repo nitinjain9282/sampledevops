@@ -1,2 +1,0 @@
-ufw disable
-ufw status
